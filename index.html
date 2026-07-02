@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReportFlow — Relatórios Automáticos com IA</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+<!-- NAVBAR -->
+<nav>
+  <div class="container nav-wrap">
+    <div class="logo">
+      <div class="logo-mark">R</div>
+      ReportFlow
+    </div>
+    <div class="nav-links">
+      <a href="#features">Recursos</a>
+      <a href="#setup">Configuração</a>
+      <a href="#pricing">Preços</a>
+      <button class="theme-toggle" id="theme-btn" aria-label="Alternar tema">
+        <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="#setup" class="btn btn-primary">Começar Grátis</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Novo · Integração com Google Sheets
+    </div>
+    <h1>Relatórios automáticos<br><span class="gradient">no piloto automático</span></h1>
+    <p>Conecte sua planilha, receba PDFs profissionais toda segunda-feira no seu email. Sem código, sem trabalho manual.</p>
+    <div class="hero-cta">
+      <a href="#setup" class="btn btn-primary btn-large">Conectar planilha →</a>
+      <a href="#features" class="btn btn-secondary btn-large">Ver demonstração</a>
+    </div>
+
+    <!-- MOCKUP DASHBOARD -->
+    <div class="hero-preview">
+      <div class="dashboard-mock">
+        <div class="dash-header">
+          <div>
+            <div class="dash-title">Relatório Semanal · Vendas</div>
+            <div class="dash-date">Semana 42 · Outubro 2024</div>
+          </div>
+          <span class="btn btn-secondary" style="font-size: 12px; padding: 6px 12px;">📥 PDF</span>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-label">Total de Vendas</div>
+            <div class="kpi-value">R$ 84.520</div>
+            <div class="kpi-change">↑ 12.4%</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Média Diária</div>
+            <div class="kpi-value">R$ 12.074</div>
+            <div class="kpi-change">↑ 8.1%</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Margem</div>
+            <div class="kpi-value">38.2%</div>
+            <div class="kpi-change">↑ 2.3%</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">ROI</div>
+            <div class="kpi-value">4.8x</div>
+            <div class="kpi-change">↑ 15%</div>
+          </div>
+        </div>
+
+        <div class="charts-mock">
+          <div class="chart-box">
+            <h4>Vendas por Dia</h4>
+            <div class="line-chart">
+              <svg viewBox="0 0 400 140" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="lg" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,100 L60,80 L120,90 L180,50 L240,60 L300,30 L360,40 L400,20" fill="none" stroke="#6366f1" stroke-width="2.5"/>
+                <path d="M0,100 L60,80 L120,90 L180,50 L240,60 L300,30 L360,40 L400,20 L400,140 L0,140 Z" fill="url(#lg)"/>
+              </svg>
+            </div>
+          </div>
+          <div class="chart-box">
+            <h4>Top Produtos</h4>
+            <div class="bars">
+              <div class="bar" style="height: 90%"></div>
+              <div class="bar" style="height: 70%"></div>
+              <div class="bar" style="height: 55%"></div>
+              <div class="bar" style="height: 42%"></div>
+              <div class="bar" style="height: 30%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <div class="badge">Recursos</div>
+      <h2>Tudo que você precisa,<br>zero configuração técnica</h2>
+      <p>Do dado bruto ao PDF profissional na caixa de entrada do seu cliente.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">📊</div>
+        <h3>Google Sheets Sync</h3>
+        <p>Conexão em 1 clique. Cole a URL da sua planilha e pronto. Atualização em tempo real.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>KPIs Automáticos</h3>
+        <p>Vendas totais, média diária, crescimento semanal, margem de lucro e ROI calculados automaticamente.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📈</div>
+        <h3>4 Gráficos Prontos</h3>
+        <p>Line chart de vendas, bar chart top produtos, indicadores semanais e pie chart de margem.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📄</div>
+        <h3>PDF Profissional</h3>
+        <p>Documento com sua logo, cores e nome. Pronto para enviar ao cliente ou apresentar em reunião.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📧</div>
+        <h3>Envio Automático</h3>
+        <p>Toda segunda 08:00 AM (ou horário customizado). Lista de contatos ilimitada.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎨</div>
+        <h3>Marca Personalizada</h3>
+        <p>Suas cores, sua logo, seu nome. Interface simples — sem código, sem devs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIG FORM -->
+<section id="setup" class="config-section">
+  <div class="container">
+    <div class="config-wrap">
+      <div class="config-info">
+        <div class="badge">Setup em 60 segundos</div>
+        <h2>Configure uma vez.<br>Automatize para sempre.</h2>
+        <p>Sem código, sem integrações complexas. Preencha o formulário ao lado e receba seu primeiro relatório em minutos.</p>
+        <ul class="step-list">
+          <li><span class="step-num">1</span> Cole a URL da sua Google Sheets</li>
+          <li><span class="step-num">2</span> Adicione os emails de destino</li>
+          <li><span class="step-num">3</span> Escolha dia e horário do envio</li>
+          <li><span class="step-num">4</span> Pronto. Receba semanalmente.</li>
+        </ul>
+      </div>
+
+      <form class="config-form" id="configForm">
+        <div class="form-title">Conectar sua planilha</div>
+        <div class="form-sub">Preencha os campos abaixo para ativar a automação</div>
+
+        <div class="form-group">
+          <label for="sheet-url">URL da Google Sheets</label>
+          <input type="url" id="sheet-url" placeholder="https://docs.google.com/spreadsheets/d/..." required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email para envio</label>
+          <input type="email" id="email" placeholder="voce@empresa.com" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="day">Dia da semana</label>
+            <select id="day">
+              <option>Segunda-feira</option>
+              <option>Terça-feira</option>
+              <option>Quarta-feira</option>
+              <option>Quinta-feira</option>
+              <option>Sexta-feira</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="time">Horário</label>
+            <input type="time" id="time" value="08:00">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="company">Nome da empresa (opcional)</label>
+          <input type="text" id="company" placeholder="Sua Empresa Ltda">
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="testBtn">Testar</button>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Conectar →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <div class="badge">Preços</div>
+      <h2>Simples e transparente</h2>
+      <p>Comece grátis. Escale quando precisar.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="plan">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price">R$0<small>/mês</small></div>
+        <div class="plan-desc">Para testar a plataforma</div>
+        <ul class="plan-features">
+          <li><span class="check">✓</span> 1 planilha conectada</li>
+          <li><span class="check">✓</span> 1 relatório por semana</li>
+          <li><span class="check">✓</span> 3 emails de destino</li>
+          <li><span class="check">✓</span> PDF com marca ReportFlow</li>
+        </ul>
+        <a href="#setup" class="btn btn-secondary">Começar grátis</a>
+      </div>
+
+      <div class="plan featured">
+        <div class="plan-tag">Popular</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">R$97<small>/mês</small></div>
+        <div class="plan-desc">Para pequenos negócios</div>
+        <ul class="plan-features">
+          <li><span class="check">✓</span> 10 planilhas conectadas</li>
+          <li><span class="check">✓</span> Relatórios ilimitados</li>
+          <li><span class="check">✓</span> Emails ilimitados</li>
+          <li><span class="check">✓</span> Marca personalizada</li>
+          <li><span class="check">✓</span> Suporte prioritário</li>
+        </ul>
+        <a href="#setup" class="btn btn-primary">Assinar Pro</a>
+      </div>
+
+      <div class="plan">
+        <div class="plan-name">Business</div>
+        <div class="plan-price">R$297<small>/mês</small></div>
+        <div class="plan-desc">Para agências e times</div>
+        <ul class="plan-features">
+          <li><span class="check">✓</span> Planilhas ilimitadas</li>
+          <li><span class="check">✓</span> Multi-usuário</li>
+          <li><span class="check">✓</span> API dedicada</li>
+          <li><span class="check">✓</span> White label completo</li>
+          <li><span class="check">✓</span> Onboarding 1:1</li>
+        </ul>
+        <a href="#setup" class="btn btn-secondary">Falar com vendas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="container">
+    <h2>Chega de perder<br>segunda-feira criando relatórios.</h2>
+    <p>Automatize hoje. Impressione seu cliente amanhã.</p>
+    <a href="#setup" class="btn btn-primary btn-large">Começar agora — grátis</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-wrap">
+    <div class="logo">
+      <div class="logo-mark">R</div>
+      ReportFlow
+    </div>
+    <div class="footer-links">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Contato</a>
+      <a href="#">Blog</a>
+    </div>
+    <div class="copy">© 2024 ReportFlow. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
